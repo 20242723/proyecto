@@ -644,8 +644,8 @@ elif opcion_menu == "Dimensiones":
         - product_type (product_name): Tipo del producto para desglosar la serie temporal y proyectar la demanda a nivel de tipo de producto para un reabastecimiento preciso.
 
         **KPI Principal:** 
-        - **WMAPE (Error Porcentual Absoluto Ponderado)**
-        *Justificación:* Evalúa cuantitativamente el porcentaje de cercanía entre la demanda proyectada y las ventas reales observadas. Su uso resulta más apropiado, ya que pondera el error por el volumen físico vendido, evitando distorsiones por productos de baja rotación.
+        - **Precisión del Pronóstico (Precisión = 100% − WMAPE)**
+        *Justificación:* EPermite evaluar cuantitativamente el porcentaje de cercanía entre la demanda proyectada y las ventas reales observadas, validando la confiabilidad general del modelo para la toma de decisiones comerciales y logísticas. El uso del WMAPE resulta más apropiado ya que pondera el error por el volumen físico vendido para evitar distorsiones por productos de baja rotación, complementándose con métricas técnicas como el MAE y el RMSE para cuantificar las desviaciones en unidades físicas semanales frente a variaciones atípicas de la demanda.
 
         **Objetivo Específico:** Proyectar la demanda semanal por producto (product_name) y sede (store_location) mediante la competencia de modelos estadísticos y de Machine Learning (Promedio Móvil, Holt-Winters, Random Forest y XGBoost), alcanzando una Precisión del Pronóstico superior al 80% (WMAPE < 20%) mediante el algoritmo ganador y reduciendo el RMSE en comparación con el modelo baseline de promedio móvil.
         """)
